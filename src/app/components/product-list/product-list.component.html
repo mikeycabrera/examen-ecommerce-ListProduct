@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="container margin">
+    <div class="row">
+        <label>List Product</label>
+        <ng-container *ngFor="let item of varProductList | paginate: { itemsPerPage:5 , currentPage: pageSize }">
+            <div class="card col-md-2" style="width: 18rem;">
+                <img class="img" src="{{item.image}}">
+                <div class="card-body">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                    <div class="row">
+                        <p class="price">Price: ${{item.price}}</p>
+                        <ngb-rating [max]="5" [(rate)]="starRating" [readonly]="true"></ngb-rating>
+                        <a href="#" class="btn btn-primary btn-sm" (click)="addDetail(item)" routerLink="/detailProduct">Detail</a>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <pagination-controls class="centrar" (pageChange)="pageSize = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+    </div>
+</div>

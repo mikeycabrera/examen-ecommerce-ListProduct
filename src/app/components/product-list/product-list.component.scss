@@ -1,0 +1,30 @@
+$margin-left: 20px;
+$margin-bottom: 8px;
+$height: 180px;
+$width: 130px;
+.img {
+    height: $height;
+    width: $width;
+}
+
+.card {
+    margin-left: $margin-left;
+    margin-bottom: $margin-bottom;
+}
+
+.price {
+    margin: 0 auto;
+}
+
+.centrar {
+    text-align: center;
+}
+
+.margin {
+    margin-top: 90px;
+}
+
+ngb-rating {
+    color: #868406;
+    font-size: 20px;
+}

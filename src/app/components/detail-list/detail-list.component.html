@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="container-fluid centrar">
+    <div class="row">
+        <label>Detail Product</label>
+        <div class="car-table">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Product Title</th>
+                        <th>Product Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of products; let i = index">
+                        <td style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</td>
+                        <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
+                        <td style="width: 25%;">{{item.description}}</td>
+                        <th style="width: 12%;">{{item.price}}</th>
+                        <td>
+                            <button routerLink="/product" class="btn btn-primary btn-sm">Return Home</button>
+                            <button class="btn btn-success btn-sm">Add Cart</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
